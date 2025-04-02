@@ -1,3 +1,6 @@
+// Route for dynamic game url
+
+
 "use client";
 
 import styles from './page.module.css';

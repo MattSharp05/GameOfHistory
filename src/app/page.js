@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
-import Header from "../components/Header";
-import CardWheel from "../components/CardWheel";
+import Header from "../components/Navbar/Header";
+import CardWheel from "../components/CardWheel/CardWheel";
 
 export default function Home() {
   const categoryCards = [

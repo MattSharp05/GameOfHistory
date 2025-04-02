@@ -2,7 +2,7 @@
 
 import styles from './CardWheel.module.css';
 import { useState } from 'react';
-import InfoModal from './InfoModal';
+import InfoModal from '../InfoModal/InfoModal';
 
 export default function CardWheel({ cards, title, cardStyle }) {
   const [selectedCard, setSelectedCard] = useState(null);

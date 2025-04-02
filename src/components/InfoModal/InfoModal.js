@@ -8,9 +8,16 @@ export default function InfoModal({ isOpen, onClose, title }) {
 
   if (!isOpen) return null;
 
-  const handlePlay = () => {
-    // Navigate to the picture game mode
-    router.push('/modes/picture');
+  const handlePlay = async () => {
+    try {
+      const mode = title.toLowerCase().replace(/\s/g, '-'); // e.g., 'Famous People' = 'famous-people'
+      const res = await fetch(`/api/start-game/${mode}`, { method: 'GET' });
+      const data = await res.json();
+  
+      router.push(`/game/${data.gameId}`);
+    } catch (err) {
+      console.error('Failed to start game:', err);
+    }
   };
 
   return (
