@@ -2,11 +2,64 @@
   min-height: 100vh;
   background-color: #212121;
   color: #ffffff;
-  padding: 2rem;
+  position: relative;
 }
 
-.container h1 {
+.content {
+  padding: 2rem;
+  padding-top: 72px; /* Height of the header + some padding */
+}
+
+.content h1 {
   font-family: 'Lobster', cursive;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+}
+
+.whiteRectangle {
+  position: absolute;
+  left: 293px;
+  top: 202px;
+  width: 881px;
+  height: 417px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.timeline {
+  position: absolute;
+  left: 293px;
+  top: 641px;
+  width: 882px;
+  height: 41px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.answerBox {
+  width: 69px;
+  height: 41px;
+  background-color: #D2D2D2;
+}
+
+.answerButton {
+  position: absolute;
+  left: 662px;
+  top: 704px;
+  padding: 1rem 2rem;
+  font-family: 'Lobster', cursive;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(to right, #667EEA, #764BA2);
+  transition: transform 0.2s ease;
+}
+
+.answerButton:hover {
+  transform: translateY(-2px);
 } 
