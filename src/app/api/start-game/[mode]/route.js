@@ -1,3 +1,5 @@
+// This is a server-side route in Next.js that handles the start game request
+// It fetches data from an external API based on the game mode and returns the response to the client.
 
 export async function GET(request, { params }) {
     const mode = (await params).mode;  

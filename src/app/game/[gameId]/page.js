@@ -4,8 +4,8 @@
 "use client";
 
 import styles from './page.module.css';
-import Header from '../../../components/Header';
-import YearsWheel from '../../../components/YearsWheel';
+import Header from '../../../components/Navbar/Header';
+import YearsWheel from '../../../components/YearsWheel/YearsWheel';
 
 export default function PictureGame() {
   return (
