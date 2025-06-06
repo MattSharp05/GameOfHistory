@@ -1,3 +1,5 @@
+// Displays a row of game modes for each category
+
 "use client";
 
 import styles from './CardWheel.module.css';
@@ -35,6 +37,7 @@ export default function CardWheel({ cards, title, cardStyle }) {
         isOpen={selectedCard !== null} 
         onClose={handleCloseModal}
         title={selectedCard?.title}
+        description={selectedCard?.description || 'No description available.'}
       />
     </div>
   );

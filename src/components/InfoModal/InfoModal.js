@@ -2,9 +2,11 @@
 
 import styles from './InfoModal.module.css';
 import { useRouter } from 'next/navigation';
+import { useGame } from '@/context/GameContext';
 
-export default function InfoModal({ isOpen, onClose, title }) {
+export default function InfoModal({ isOpen, onClose, title, description }) {
   const router = useRouter();
+  const { setGameData } = useGame();
 
   if (!isOpen) return null;
 
@@ -13,7 +15,8 @@ export default function InfoModal({ isOpen, onClose, title }) {
       const mode = title.toLowerCase().replace(/\s/g, '-'); // e.g., 'Famous People' = 'famous-people'
       const res = await fetch(`/api/start-game/${mode}`, { method: 'GET' });
       const data = await res.json();
-  
+
+      setGameData(data);  // store game data in context
       router.push(`/game/${data.gameId}`);
     } catch (err) {
       console.error('Failed to start game:', err);
@@ -27,7 +30,7 @@ export default function InfoModal({ isOpen, onClose, title }) {
         <h2>{title}</h2>
         <div className={styles.content}>
           {/* Add your content here */}
-          <p>Information about the Picture category will go here.</p>
+          <p>{description}</p>
         </div>
         <button className={styles.playButton} onClick={handlePlay}>Play</button>
       </div>

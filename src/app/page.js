@@ -4,7 +4,7 @@ import CardWheel from "../components/CardWheel/CardWheel";
 
 export default function Home() {
   const categoryCards = [
-    { title: 'Picture', id: 'picture' },
+    { title: 'Picture', id: 'picture', description: 'Players must determine the year a historical photo was taken by analyzing visual clues within the image. Without direct hints, they rely on details like photo quality, objects, and setting to make their best guess. This mode rewards a keen eye and historical intuition, making every round a test of observation and deduction.' },
     { title: 'Famous People', id: 'famous-people' },
     { title: 'Cars', id: 'cars' },
     { title: 'Art', id: 'art' },
